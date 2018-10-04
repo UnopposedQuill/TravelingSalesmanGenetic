@@ -138,10 +138,17 @@ int main(int argc, char** argv)
 		if(argc == 3){
 			cout <<"Generacion: "<<i <<endl;
 		}
+		if(argc == 3){
+		test.verMejorIndividuo();
+	}
+		else{//si no, sólo imprime valores mínimos.
+			test.imprimirMejorCosto();
+		}
         test = test.evolucionar();
     }
 	
 	//si le llegan tres argumentos, entra en modo "verbose", lo cual hace que imprima todo
+	cout <<"Poblacion Final-----------------------" <<endl;
 	if(argc == 3){
 		test.verMejorIndividuo();
 	}
