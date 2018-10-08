@@ -28,7 +28,7 @@ void Poblacion::setPoblacionInicial(){
 }
 
 void Poblacion::ordenarIndividuos(){   //algoritmo de ordenamiento usado: shellsort
-    int i,j,incremento;
+    int i, j, incremento;
     int n = individuos.size();
     for(incremento=n/2; incremento>0; incremento /= 2){
         for(i=incremento; i<n; i++){
@@ -104,12 +104,10 @@ vector <int> intercambioGenetico_Aux(vector<int> padre, vector<int> madre){
     for(int i = 0; i<padre.size(); i++){
         if (hijo.size()< padre.size()){
              if( std::find(hijo.begin(), hijo.end(), padre[i]) != hijo.end()) {
-                continue;
+                	continue;
             } else {
                 hijo.push_back(padre[i]);
             }
-
-
             if (hijo.size()== (padre.size()-1)){ // si es del tamaño del padre agrega ultimo elemento
                 hijo.push_back(hijo[0]);
                 return hijo;
@@ -133,9 +131,7 @@ vector <int> intercambioGenetico_Aux(vector<int> padre, vector<int> madre){
             hijo.push_back(hijo[0]);
             return hijo;
         }
-
     }
-
     return hijo;
 }
 
@@ -202,8 +198,6 @@ void Poblacion::verMejorIndividuo(){  //imprime el orden en el que se visitan la
 
             vector<float> origen = matrizDeCostos[ruta[i]];
             float destino = origen[ruta[i+1]];
-
-
 
             cout << ciudad1 << " -> " << ciudad2 << "  costo: " << destino << endl;
 

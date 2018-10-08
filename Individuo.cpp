@@ -82,12 +82,8 @@ Individuo Individuo::mutar(Individuo original, vector<vector<float> >  matCosto)
 
         original = aux;
 
-
     }
     return original;
-
-
-
 }
 
 void Individuo::verRuta(){
